@@ -1,6 +1,6 @@
 public class CustomStack {
     protected int[] data;
-    private static final int DEFAULT_SIZE = 10;
+    private static final int DEFAULT_SIZE = 5;
     int ptr = -1;
 
     public CustomStack() {
@@ -44,14 +44,14 @@ public class CustomStack {
     }
 
     public static void main(String[] args) throws StackException{
-        CustomStack stack= new CustomStack();
+        CustomStack stack= new DynamicStack();
 
         stack.push(34);
         stack.push(45);
         stack.push(2);
         stack.push(9);
         stack.push(18);
-        stack.push(89);
+        stack.push(89); //gives error if DynamicStack not used
 
 
         System.out.println(stack.pop());
